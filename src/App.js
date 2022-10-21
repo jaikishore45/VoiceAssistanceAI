@@ -17,6 +17,8 @@ const LogoContainer = styled("div")(({ theme }) => ({
   },
 }));
 
+console.log(LogoContainer);
+
 const InfoContainer = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -25,7 +27,7 @@ const InfoContainer = styled("div")(({ theme }) => ({
     flexDirection: "column",
   },
 }));
-
+console.log(InfoContainer);
 const Card = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
@@ -48,7 +50,7 @@ const Card = styled("div")(({ theme }) => ({
     },
   },
 }));
-
+console.log(Card);
 const LogoImg = styled("img")(({ theme }) => ({
   height: "27vmin",
   borderRadius: "15%",
@@ -58,7 +60,7 @@ const LogoImg = styled("img")(({ theme }) => ({
     height: "35vmin",
   },
 }));
-
+console.log(LogoImg);
 const Footer = styled("div")(({ theme }) => ({
   textAlign: "center",
   position: "fixed",
@@ -79,7 +81,7 @@ const Link = styled("a")(({ theme }) => ({
   textDecoration: "none",
   color: "rgba(21, 101, 192)",
 }));
-
+console.log(Link);
 const App = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
