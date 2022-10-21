@@ -34,7 +34,7 @@ const Card = styled("div")(({ theme }) => ({
   padding: "3%",
   borderRadius: 10,
   color: "white",
-  backgroundColor: "rgba(21, 101, 192)",
+  backgroundColor: "#000",
   margin: "0 12px",
   textAlign: "center",
   height: "25vmin",
@@ -84,9 +84,12 @@ const App = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
 
+
   useEffect(() => {
     alanBtn({
-      key: "39f45c25f64f4f8dbae4787777096bfb2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      //ofacc
+      // key: "dd0234ba5773e048f8729265a42e860c2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      key: "0c45b64eb43b445c6e6b8eee71dd46d62e956eca572e1d8b807a3e2338fdd0dc/stages",
       onCommand: ({ command, articles, number }) => {
         if (command === "newHeadlines") {
           setNewsArticles(articles);
@@ -105,6 +108,7 @@ const App = () => {
           } else if (article) {
             window.open(article.url, "_blank");
             alanBtn().playText("Opening...");
+          
           } else {
             alanBtn().playText("Please try that again...");
           }
@@ -114,45 +118,37 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <LogoContainer>
+    <div >
+      {/* <LogoContainer>
         {newsArticles.length ? (
           <InfoContainer>
-            <Card>
-              <Typography variant="h5" component="h2">
-                Try saying: <br />
-                <br />
-                Open article number [4]
-              </Typography>
-            </Card>
-            <Card>
-              <Typography variant="h5" component="h2">
-                Try saying: <br />
-                <br />
-                Go back
-              </Typography>
-            </Card>
+            
+            
           </InfoContainer>
         ) : null}
-        <LogoImg
-          src="https://miro.medium.com/max/600/1*CJyCnZVdr-EfgC27MAdFUQ.jpeg"
-          alt="logo"
-        />
-      </LogoContainer>
+        
+      </LogoContainer> */}
+      
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       {!newsArticles.length ? (
         <Footer>
-          <Typography variant="body1" component="h2">
-            Created by
-            <Link href="http://youtube.com/antonfrancisjeejo13">
-              {" "}
-              Anton Francis Jeejo
-            </Link>
+          <Typography >
+           
           </Typography>
         </Footer>
       ) : null}
+
+      {/* <productCard articles={newsArticles} activeArticle={activeArticle} />
+      {!newsArticles.length ? (
+        <Footer>
+          <Typography >
+           
+          </Typography>
+        </Footer>
+      ) : null} */}
     </div>
   );
 };
+
 
 export default App;
