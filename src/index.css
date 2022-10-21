@@ -4,7 +4,9 @@
 
 body {
     margin: 0;
-    background-color: whitesmoke;
+    background-color: rgb(43, 39, 39);
+    padding: 50px;
+    padding-bottom: 50px;
 }
 
 * {
