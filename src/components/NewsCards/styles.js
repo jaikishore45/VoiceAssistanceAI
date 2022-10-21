@@ -16,6 +16,8 @@ export default makeStyles({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
+    backgroundColor:"black",
+    color:"white",
   },
   container: {
     padding: "0 5%",
